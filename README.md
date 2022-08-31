@@ -1,5 +1,3 @@
-# Radon
-
 ## Open to Intern Project Requirement
 
 ### Key points
