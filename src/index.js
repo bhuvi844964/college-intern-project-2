@@ -16,6 +16,12 @@ mongoose.connect("mongodb+srv://avi-sin:CJTIF4CupXQdRKHV@cluster0.ovf3r.mongodb.
 app.use('/', route)                       
 
 
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send("Oops, something went wrong.");
+  });
+
+
 app.listen(process.env.PORT || 3000, function () {
     console.log('Express app running on port ' + (process.env.PORT || 3000))
 });
